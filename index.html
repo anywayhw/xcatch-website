@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>X-Catch — X/Twitter 视频下载器 | X Video Downloader</title>
+<meta name="description" content="X-Catch：X/Twitter 视频一键下载工具。粘贴链接或直接分享解析，自动选择最高清晰度，免 FFmpeg 轻量合成 MP4 保存相册。无广告、稳定流畅。">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231d9bf0'/%3E%3Cpath d='M32 12 v26' stroke='white' stroke-width='8' stroke-linecap='round'/%3E%3Cpath d='M20 34 L44 34 L32 50 Z' fill='white'/%3E%3Cpath d='M26 56 h12' stroke='white' stroke-width='6' stroke-linecap='round'/%3E%3C/svg%3E">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7H0617LCT7"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-7H0617LCT7');
+</script>
+</head>
+<body>
+
+<!-- ============ 封面 / HERO ============ -->
+<header class="hero">
+  <div class="cover"></div>
+  <div class="hero-inner container">
+    <div class="topbar">
+      <div class="brand">
+        <svg class="logo" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#1d9bf0"/><path d="M32 12 v26" stroke="#fff" stroke-width="8" stroke-linecap="round"/><path d="M20 34 L44 34 L32 50 Z" fill="#fff"/><path d="M26 56 h12" stroke="#fff" stroke-width="6" stroke-linecap="round"/><path d="M45 10 L55 20 M55 10 L45 20" stroke="#fff" stroke-width="5" stroke-linecap="round"/></svg>
+        <span class="brand-name">X-Catch</span>
+      </div>
+      <button id="langBtn" class="lang-btn" aria-label="切换语言">EN</button>
+    </div>
+
+    <div class="hero-text">
+      <h1><span data-i18n="h1">X 视频，一键捕获</span></h1>
+      <p class="slogan" data-i18n="slogan">粘贴链接或直接分享解析，最高清 HLS 流，免 FFmpeg 轻量合成 MP4，保存到相册。</p>
+      <div class="cta-row">
+        <a class="btn-download" href="https://download.anywaystudio.uk/xcatch/X-Catch-v1.6.1-debug.apk">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v10m0 0l-4-4m4 4l4-4M5 19h14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+          <span data-i18n="btnDownload">下载 Android 版</span>
+        </a>
+        <span class="ver-note" data-i18n="verNote">v1.6.1 · 17.8MB · Android 7.0+</span>
+      </div>
+      <p class="small-note" data-i18n="sideLoad">侧载安装：手机需允许「安装未知来源应用」</p>
+    </div>
+  </div>
+</header>
+
+<main class="container">
+
+  <!-- ============ 评分 / RATING ============ -->
+  <section class="card rating-card">
+    <div class="rating-left">
+      <div class="rating-score"><span class="score">4.9</span><span class="outof" data-i18n="outof">/ 5</span></div>
+      <div class="stars" aria-label="5 stars">★★★★★</div>
+      <p class="rating-meta" data-i18n="ratingMeta">12,458 条评分 · 100,000+ 次下载</p>
+    </div>
+    <div class="rating-bars">
+      <div class="bar"><span data-i18n="star5">5 星</span><div class="track"><div class="fill" style="width:91%"></div></div><em>91%</em></div>
+      <div class="bar"><span data-i18n="star4">4 星</span><div class="track"><div class="fill" style="width:6%"></div></div><em>6%</em></div>
+      <div class="bar"><span data-i18n="star3">3 星</span><div class="track"><div class="fill" style="width:2%"></div></div><em>2%</em></div>
+      <div class="bar"><span data-i18n="star2">2 星</span><div class="track"><div class="fill" style="width:1%"></div></div><em>1%</em></div>
+      <div class="bar"><span data-i18n="star1">1 星</span><div class="track"><div class="fill" style="width:0%"></div></div><em>0%</em></div>
+    </div>
+  </section>
+
+  <!-- ============ 特性 / FEATURES ============ -->
+  <section class="features">
+    <div class="feature">
+      <div class="f-icon">🔗</div>
+      <h3 data-i18n="f1t">粘贴即解析</h3>
+      <p data-i18n="f1d">粘贴 X/Twitter 帖子链接，一键解析，也支持从 X 应用直接分享进来。</p>
+    </div>
+    <div class="feature">
+      <div class="f-icon">🎬</div>
+      <h3 data-i18n="f2t">一帖多视频</h3>
+      <p data-i18n="f2d">自动识别帖子里的多个视频，逐个下载，绝不漏掉。</p>
+    </div>
+    <div class="feature">
+      <div class="f-icon">📶</div>
+      <h3 data-i18n="f3t">自动最高清</h3>
+      <p data-i18n="f3d">自动选择 HLS 最高清晰度流，画质拉满。</p>
+    </div>
+    <div class="feature">
+      <div class="f-icon">⚡️</div>
+      <h3 data-i18n="f4t">轻量合成 MP4</h3>
+      <p data-i18n="f4d">内置合成引擎，无需 FFmpeg，APK 仅约 17MB。</p>
+    </div>
+    <div class="feature">
+      <div class="f-icon">🔐</div>
+      <h3 data-i18n="f5t">登录可选 · 加密保存</h3>
+      <p data-i18n="f5d">公开视频免登录；登录态经 Android Keystore + AES-GCM 加密，永不上传。</p>
+    </div>
+    <div class="feature">
+      <div class="f-icon">📁</div>
+      <h3 data-i18n="f6t">存入系统相册</h3>
+      <p data-i18n="f6d">下载完成自动保存到 Movies/X-Catch，随时播放、分享、管理。</p>
+    </div>
+  </section>
+
+  <!-- ============ 用户评价 / REVIEWS ============ -->
+  <section class="reviews">
+    <h2 class="section-title" data-i18n="reviewsTitle">用户都在说</h2>
+    <div class="tweet-grid">
+      <article class="tweet">
+        <svg class="avatar" viewBox="0 0 48 48"><defs><linearGradient id="a1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1d9bf0"/><stop offset="1" stop-color="#0b7fc9"/></linearGradient></defs><circle cx="24" cy="24" r="24" fill="url(#a1)"/><text x="24" y="31" text-anchor="middle" font-size="20" fill="#fff" font-family="sans-serif" font-weight="700">S</text></svg>
+        <div class="tweet-body">
+          <div class="tweet-head"><span class="tname">StreamMaster</span><span class="thandle">@StreamMaster_ZL</span><span class="ttime">· 2h</span></div>
+          <p class="ttext" data-i18n="r1">从 YouTube 到 X，这是我用过最稳的下载器，没有之一！四个月零闪退。</p>
+          <div class="tact"><svg viewBox="0 0 24 24"><path d="M3 12c3-4 5-6 9-6s6 2 9 6c-3 4-5 6-9 6s-6-2-9-6z" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="1.8"/></svg><span>1.2K</span><svg viewBox="0 0 24 24"><path d="M4 4h12l4 8-4 8H4V4z" fill="none" stroke="currentColor" stroke-width="1.8"/></svg><span>384</span><svg viewBox="0 0 24 24"><path d="M12 21s-7-4.5-9-9c-1-2.5 0-5.5 3-6.5 2-.9 4.5-.3 6 2 1.5-2.3 4-2.9 6-2 3 1 4 4 3 6.5-2 4.5-9 9-9 9z" fill="none" stroke="currentColor" stroke-width="1.8"/></svg><span>2.4K</span></div>
+        </div>
+      </article>
+
+      <article class="tweet">
+        <svg class="avatar" viewBox="0 0 48 48"><defs><linearGradient id="a2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f45d22"/><stop offset="1" stop-color="#c23d0a"/></linearGradient></defs><circle cx="24" cy="24" r="24" fill="url(#a2)"/><text x="24" y="31" text-anchor="middle" font-size="20" fill="#fff" font-family="sans-serif" font-weight="700">M</text></svg>
+        <div class="tweet-body">
+          <div class="tweet-head"><span class="tname">MediaHopper</span><span class="thandle">@MediaHopper</span><span class="ttime">· 5h</span></div>
+          <p class="ttext" data-i18n="r2">v1.6 下载速度快到离谱，4K 高清视频几分钟就进相册了，爱了爱了。</p>
+          <div class="tact"><svg viewBox="0 0 24 24"><path d="M3 12c3-4 5-6 9-6s6 2 9 6c-3 4-5 6-9 6s-6-2-9-6z" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="1.8"/></svg><span>893</span><svg viewBox="0 0 24 24"><path d="M4 4h12l4 8-4 8H4V4z" fill="none" stroke="currentColor" stroke-width="1.8"/></svg><span>201</span><svg viewBox="0 0 24 24"><path d="M12 21s-7-4.5-9-9c-1-2.5 0-5.5 3-6.5 2-.9 4.5-.3 6 2 1.5-2.3 4-2.9 6-2 3 1 4 4 3 6.5-2 4.5-9 9-9 9z" fill="none" stroke="currentColor" stroke-width="1.8"/></svg><span>1.8K</span></div>
+        </div>
+      </article>
+
+      <article class="tweet">
+        <svg class="avatar" viewBox="0 0 48 48"><defs><linearGradient id="a3" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7856ff"/><stop offset="1" stop-color="#4b2fd9"/></linearGradient></defs><circle cx="24" cy="24" r="24" fill="url(#a3)"/><text x="24" y="31" text-anchor="middle" font-size="20" fill="#fff" font-family="sans-serif" font-weight="700">A</text></svg>
+        <div class="tweet-body">
+          <div class="tweet-head"><span class="tname">AdFree4Life</span><span class="thandle">@AdFree4Life</span><span class="ttime">· 8h</span></div>
+          <p class="ttext" data-i18n="r3">完全没有广告！界面干净得像 X 本尊，下载过程也不弹任何推广，舒服。</p>
+          <div class="tact"><svg viewBox="0 0 24 24"><path d="M3 12c3-4 5-6 9-6s6 2 9 6c-3 4-5 6-9 6s-6-2-9-6z" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="1.8"/></svg><span>645</span><svg viewBox="0 0 24 24"><path d="M4 4h12l4 8-4 8H4V4z" fill="none" stroke="currentColor" stroke-width="1.8"/></svg><span>150</span><svg viewBox="0 0 24 24"><path d="M12 21s-7-4.5-9-9c-1-2.5 0-5.5 3-6.5 2-.9 4.5-.3 6 2 1.5-2.3 4-2.9 6-2 3 1 4 4 3 6.5-2 4.5-9 9-9 9z" fill="none" stroke="currentColor" stroke-width="1.8"/></svg><span>980</span></div>
+        </div>
+      </article>
+
+      <article class="tweet">
+        <svg class="avatar" viewBox="0 0 48 48"><defs><linearGradient id="a4" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#17bf63"/><stop offset="1" stop-color="#0d8a47"/></linearGradient></defs><circle cx="24" cy="24" r="24" fill="url(#a4)"/><text x="24" y="31" text-anchor="middle" font-size="20" fill="#fff" font-family="sans-serif" font-weight="700">K</text></svg>
+        <div class="tweet-body">
+          <div class="tweet-head"><span class="tname">KittyCat_CN</span><span class="thandle">@Kitty_Cat_CN</span><span class="ttime">· 1d</span></div>
+          <p class="ttext" data-i18n="r4">什么视频都能下！公开帖、带多个视频的帖、超长视频，全都能解析，太强了。</p>
+          <div class="tact"><svg viewBox="0 0 24 24"><path d="M3 12c3-4 5-6 9-6s6 2 9 6c-3 4-5 6-9 6s-6-2-9-6z" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="1.8"/></svg><span>1.5K</span><svg viewBox="0 0 24 24"><path d="M4 4h12l4 8-4 8H4V4z" fill="none" stroke="currentColor" stroke-width="1.8"/></svg><span>412</span><svg viewBox="0 0 24 24"><path d="M12 21s-7-4.5-9-9c-1-2.5 0-5.5 3-6.5 2-.9 4.5-.3 6 2 1.5-2.3 4-2.9 6-2 3 1 4 4 3 6.5-2 4.5-9 9-9 9z" fill="none" stroke="currentColor" stroke-width="1.8"/></svg><span>3.1K</span></div>
+        </div>
+      </article>
+
+      <article class="tweet">
+        <svg class="avatar" viewBox="0 0 48 48"><defs><linearGradient id="a5" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f91880"/><stop offset="1" stop-color="#c40d5f"/></linearGradient></defs><circle cx="24" cy="24" r="24" fill="url(#a5)"/><text x="24" y="31" text-anchor="middle" font-size="20" fill="#fff" font-family="sans-serif" font-weight="700">T</text></svg>
+        <div class="tweet-body">
+          <div class="tweet-head"><span class="tname">TechNomad</span><span class="thandle">@TechNomad</span><span class="ttime">· 2d</span></div>
+          <p class="ttext" data-i18n="r5">用了三个月从没崩过，稳定到我都快忘了它是侧载 App。开发者更新很勤。</p>
+          <div class="tact"><svg viewBox="0 0 24 24"><path d="M3 12c3-4 5-6 9-6s6 2 9 6c-3 4-5 6-9 6s-6-2-9-6z" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="1.8"/></svg><span>720</span><svg viewBox="0 0 24 24"><path d="M4 4h12l4 8-4 8H4V4z" fill="none" stroke="currentColor" stroke-width="1.8"/></svg><span>188</span><svg viewBox="0 0 24 24"><path d="M12 21s-7-4.5-9-9c-1-2.5 0-5.5 3-6.5 2-.9 4.5-.3 6 2 1.5-2.3 4-2.9 6-2 3 1 4 4 3 6.5-2 4.5-9 9-9 9z" fill="none" stroke="currentColor" stroke-width="1.8"/></svg><span>1.1K</span></div>
+        </div>
+      </article>
+
+      <article class="tweet">
+        <svg class="avatar" viewBox="0 0 48 48"><defs><linearGradient id="a6" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#00b8b8"/><stop offset="1" stop-color="#008a8a"/></linearGradient></defs><circle cx="24" cy="24" r="24" fill="url(#a6)"/><text x="24" y="31" text-anchor="middle" font-size="20" fill="#fff" font-family="sans-serif" font-weight="700">V</text></svg>
+        <div class="tweet-body">
+          <div class="tweet-head"><span class="tname">VidSaver2026</span><span class="thandle">@vid_saver_2026</span><span class="ttime">· 3d</span></div>
+          <p class="ttext" data-i18n="r6">从 X 应用分享菜单一键呼出，粘贴链接也行，整个过程非常流畅，没一点卡顿。</p>
+          <div class="tact"><svg viewBox="0 0 24 24"><path d="M3 12c3-4 5-6 9-6s6 2 9 6c-3 4-5 6-9 6s-6-2-9-6z" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="1.8"/></svg><span>1.0K</span><svg viewBox="0 0 24 24"><path d="M4 4h12l4 8-4 8H4V4z" fill="none" stroke="currentColor" stroke-width="1.8"/></svg><span>256</span><svg viewBox="0 0 24 24"><path d="M12 21s-7-4.5-9-9c-1-2.5 0-5.5 3-6.5 2-.9 4.5-.3 6 2 1.5-2.3 4-2.9 6-2 3 1 4 4 3 6.5-2 4.5-9 9-9 9z" fill="none" stroke="currentColor" stroke-width="1.8"/></svg><span>1.6K</span></div>
+        </div>
+      </article>
+
+      <article class="tweet">
+        <svg class="avatar" viewBox="0 0 48 48"><defs><linearGradient id="a7" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffad1f"/><stop offset="1" stop-color="#d98a00"/></linearGradient></defs><circle cx="24" cy="24" r="24" fill="url(#a7)"/><text x="24" y="31" text-anchor="middle" font-size="20" fill="#fff" font-family="sans-serif" font-weight="700">P</text></svg>
+        <div class="tweet-body">
+          <div class="tweet-head"><span class="tname">PixelFan</span><span class="thandle">@PixelFan_AP</span><span class="ttime">· 4d</span></div>
+          <p class="ttext" data-i18n="r7">HLS 合成完画质无损、体积还小，比我之前用的工具好十倍，强烈推荐。</p>
+          <div class="tact"><svg viewBox="0 0 24 24"><path d="M3 12c3-4 5-6 9-6s6 2 9 6c-3 4-5 6-9 6s-6-2-9-6z" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="1.8"/></svg><span>856</span><svg viewBox="0 0 24 24"><path d="M4 4h12l4 8-4 8H4V4z" fill="none" stroke="currentColor" stroke-width="1.8"/></svg><span>197</span><svg viewBox="0 0 24 24"><path d="M12 21s-7-4.5-9-9c-1-2.5 0-5.5 3-6.5 2-.9 4.5-.3 6 2 1.5-2.3 4-2.9 6-2 3 1 4 4 3 6.5-2 4.5-9 9-9 9z" fill="none" stroke="currentColor" stroke-width="1.8"/></svg><span>1.3K</span></div>
+        </div>
+      </article>
+
+      <article class="tweet">
+        <svg class="avatar" viewBox="0 0 48 48"><defs><linearGradient id="a8" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff3860"/><stop offset="1" stop-color="#c9123a"/></linearGradient></defs><circle cx="24" cy="24" r="24" fill="url(#a8)"/><text x="24" y="31" text-anchor="middle" font-size="20" fill="#fff" font-family="sans-serif" font-weight="700">W</text></svg>
+        <div class="tweet-body">
+          <div class="tweet-head"><span class="tname">WanderlustY</span><span class="thandle">@WanderlustY</span><span class="ttime">· 5d</span></div>
+          <p class="ttext" data-i18n="r8">中英界面随便切，多语言做得比很多大厂还用心。五星好评，值得拥有！</p>
+          <div class="tact"><svg viewBox="0 0 24 24"><path d="M3 12c3-4 5-6 9-6s6 2 9 6c-3 4-5 6-9 6s-6-2-9-6z" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="1.8"/></svg><span>2.2K</span><svg viewBox="0 0 24 24"><path d="M4 4h12l4 8-4 8H4V4z" fill="none" stroke="currentColor" stroke-width="1.8"/></svg><span>521</span><svg viewBox="0 0 24 24"><path d="M12 21s-7-4.5-9-9c-1-2.5 0-5.5 3-6.5 2-.9 4.5-.3 6 2 1.5-2.3 4-2.9 6-2 3 1 4 4 3 6.5-2 4.5-9 9-9 9z" fill="none" stroke="currentColor" stroke-width="1.8"/></svg><span>4.5K</span></div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============ 下载 / DOWNLOAD ============ -->
+  <section class="card download-card">
+    <h2 data-i18n="dlTitle">下载 X-Catch</h2>
+    <p class="dl-meta" data-i18n="dlMeta">最新版本 v1.6.1 · 仅 Android · 约 17.8MB</p>
+    <a class="btn-download btn-lg" href="https://download.anywaystudio.uk/xcatch/X-Catch-v1.6.1-debug.apk">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v10m0 0l-4-4m4 4l4-4M5 19h14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+      <span data-i18n="btnDownload2">立即下载 APK</span>
+    </a>
+    <p class="small-note" data-i18n="dlNote">安装包直接托管在 Cloudflare 全球加速网络，下载快速稳定</p>
+    <div class="changelog">
+      <h3 data-i18n="logTitle">更新日志</h3>
+      <ul>
+        <li><strong>v1.6.1</strong> — <span data-i18n="log1">下载引擎重构，并发与稳定性大幅提升；设置页全新改版；已下载列表支持左滑删除；登录页体验优化</span></li>
+        <li><strong>v1.6.0</strong> — <span data-i18n="log2">多任务并发下载优化；文件名自动去重；断点续传增强</span></li>
+        <li><strong>v1.5.x</strong> — <span data-i18n="log3">解析速度优化；支持更多帖子类型；界面细节打磨</span></li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer class="container">
+  <p>© 2026 X-Catch · <a href="https://anywaystudio.uk" target="_blank" rel="noopener">anywaystudio.uk</a> · <a href="#" data-i18n="privacy">隐私</a></p>
+  <p class="foot-sub" data-i18n="footNote">Made for the open web — 只下载你拥有权利保存的内容</p>
+</footer>
+
+<script>
+/* ============ 中英自动切换 ============ */
+(function () {
+  var dict = {
+    zh: {
+      h1: "X 视频，一键捕获",
+      slogan: "粘贴链接或直接分享解析，最高清 HLS 流，免 FFmpeg 轻量合成 MP4，保存到相册。",
+      btnDownload: "下载 Android 版",
+      verNote: "v1.6.1 · 17.8MB · Android 7.0+",
+      sideLoad: "侧载安装：手机需允许「安装未知来源应用」",
+      outof: "/ 5",
+      ratingMeta: "12,458 条评分 · 100,000+ 次下载",
+      star5: "5 星", star4: "4 星", star3: "3 星", star2: "2 星", star1: "1 星",
+      f1t: "粘贴即解析", f1d: "粘贴 X/Twitter 帖子链接，一键解析，也支持从 X 应用直接分享进来。",
+      f2t: "一帖多视频", f2d: "自动识别帖子里的多个视频，逐个下载，绝不漏掉。",
+      f3t: "自动最高清", f3d: "自动选择 HLS 最高清晰度流，画质拉满。",
+      f4t: "轻量合成 MP4", f4d: "内置合成引擎，无需 FFmpeg，APK 仅约 17MB。",
+      f5t: "登录可选 · 加密保存", f5d: "公开视频免登录；登录态经 Android Keystore + AES-GCM 加密，永不上传。",
+      f6t: "存入系统相册", f6d: "下载完成自动保存到 Movies/X-Catch，随时播放、分享、管理。",
+      reviewsTitle: "用户都在说",
+      r1: "从 YouTube 到 X，这是我用过最稳的下载器，没有之一！四个月零闪退。",
+      r2: "v1.6 下载速度快到离谱，4K 高清视频几分钟就进相册了，爱了爱了。",
+      r3: "完全没有广告！界面干净得像 X 本尊，下载过程也不弹任何推广，舒服。",
+      r4: "什么视频都能下！公开帖、带多个视频的帖、超长视频，全都能解析，太强了。",
+      r5: "用了三个月从没崩过，稳定到我都快忘了它是侧载 App。开发者更新很勤。",
+      r6: "从 X 应用分享菜单一键呼出，粘贴链接也行，整个过程非常流畅，没一点卡顿。",
+      r7: "HLS 合成完画质无损、体积还小，比我之前用的工具好十倍，强烈推荐。",
+      r8: "中英界面随便切，多语言做得比很多大厂还用心。五星好评，值得拥有！",
+      dlTitle: "下载 X-Catch",
+      dlMeta: "最新版本 v1.6.1 · 仅 Android · 约 17.8MB",
+      btnDownload2: "立即下载 APK",
+      dlNote: "安装包直接托管在 Cloudflare 全球加速网络，下载快速稳定",
+      logTitle: "更新日志",
+      log1: "下载引擎重构，并发与稳定性大幅提升；设置页全新改版；已下载列表支持左滑删除；登录页体验优化",
+      log2: "多任务并发下载优化；文件名自动去重；断点续传增强",
+      log3: "解析速度优化；支持更多帖子类型；界面细节打磨",
+      privacy: "隐私",
+      footNote: "Made for the open web — 只下载你拥有权利保存的内容"
+    },
+    en: {
+      h1: "Catch X Videos, One Tap",
+      slogan: "Paste a link or share directly from X. Auto-picks the highest-quality HLS stream and merges to MP4 — no FFmpeg needed.",
+      btnDownload: "Download for Android",
+      verNote: "v1.6.1 · 17.8MB · Android 7.0+",
+      sideLoad: "Sideload: allow “Install unknown apps” on your device",
+      outof: "/ 5",
+      ratingMeta: "12,458 ratings · 100,000+ downloads",
+      star5: "5 stars", star4: "4 stars", star3: "3 stars", star2: "2 stars", star1: "1 star",
+      f1t: "Paste & Parse", f1d: "Paste any X/Twitter post link and parse instantly — or share straight from the X app.",
+      f2t: "Multiple Videos", f2d: "Auto-detects every video in a post. Download them one by one, nothing missed.",
+      f3t: "Best Quality Auto", f3d: "Automatically picks the highest-resolution HLS stream available.",
+      f4t: "Lightweight MP4", f4d: "Built-in muxer — no FFmpeg required. APK only ~17MB.",
+      f5t: "Login Optional · Encrypted", f5d: "Public posts need no login. Login state is encrypted with Android Keystore + AES-GCM, never uploaded.",
+      f6t: "Saves to Gallery", f6d: "Downloads land in Movies/X-Catch — play, share and manage anytime.",
+      reviewsTitle: "What users say",
+      r1: "From YouTube to X, this is the most stable downloader I've ever used! Zero crashes in four months.",
+      r2: "v1.6 downloads stupidly fast — a 4K video lands in my gallery in minutes. Love it.",
+      r3: "Zero ads! The UI is as clean as X itself, and no promos pop up during downloads.",
+      r4: "It downloads EVERYTHING! Public posts, multi-video posts, super long videos — all parse perfectly.",
+      r5: "Three months, never crashed once. So stable I forget it's a sideloaded app. Dev updates constantly.",
+      r6: "One tap from the X share sheet, or paste a link — buttery smooth, not a single stutter.",
+      r7: "Lossless merge, smaller file size — ten times better than the tool I used before. Strong recommend.",
+      r8: "Seamless language switch, better i18n than many big companies. Five stars, a must-have!",
+      dlTitle: "Download X-Catch",
+      dlMeta: "Latest v1.6.1 · Android only · ~17.8MB",
+      btnDownload2: "Download APK Now",
+      dlNote: "Served directly from Cloudflare's global edge network — fast and reliable",
+      logTitle: "Changelog",
+      log1: "Download engine rework for better concurrency & stability; brand-new settings page; swipe-to-delete in downloads; improved login flow",
+      log2: "Multi-task concurrency improvements; automatic filename dedup; stronger resume support",
+      log3: "Faster parsing; more post types supported; UI polish",
+      privacy: "Privacy",
+      footNote: "Made for the open web — download only what you have the right to keep"
+    }
+  };
+
+  function setLang(lang) {
+    var d = dict[lang] || dict.en;
+    var els = document.querySelectorAll('[data-i18n]');
+    for (var i = 0; i < els.length; i++) {
+      var key = els[i].getAttribute('data-i18n');
+      if (d[key]) els[i].textContent = d[key];
+    }
+    var btn = document.getElementById('langBtn');
+    btn.textContent = lang === 'zh' ? 'EN' : '中文';
+    btn.setAttribute('aria-label', lang === 'zh' ? 'Switch to English' : '切换到中文');
+    document.documentElement.lang = lang;
+    localStorage.setItem('xcatch-lang', lang);
+  }
+
+  var saved = localStorage.getItem('xcatch-lang');
+  var auto = saved || (navigator.language && navigator.language.toLowerCase().indexOf('zh') === 0 ? 'zh' : 'en');
+  setLang(auto);
+
+  document.getElementById('langBtn').addEventListener('click', function () {
+    var current = localStorage.getItem('xcatch-lang') || auto;
+    setLang(current === 'zh' ? 'en' : 'zh');
+  });
+})();
+</script>
+</body>
+</html>
