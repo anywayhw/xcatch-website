@@ -29,28 +29,30 @@
       <button id="langBtn" class="lang-btn" aria-label="切换语言">EN</button>
     </div>
 
-    <div class="hero-text">
-      <h1><span data-i18n="h1">X 视频，一键捕获</span></h1>
-      <p class="slogan" data-i18n="slogan">专为 X / Twitter 打造的 Android 视频下载工具，全球超过 10 万用户正在使用。粘贴链接或从 X 应用一键分享，自动识别帖子内的全部视频并逐一下载，以原画清晰度合成为 MP4 直达系统相册——无需 FFmpeg、无广告、无任何多余权限。登录账号可解锁更多可下载内容，即使在其他工具无法登录的情况下，X-Catch 依然稳定在线。轻量、安全、极速，让每一段想保存的视频都触手可及。</p>
-      <div class="cta-row">
-        <a class="btn-download" href="https://download.anywaystudio.uk/xcatch/X-Catch-v1.6.1.apk">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v10m0 0l-4-4m4 4l4-4M5 19h14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
-          <span data-i18n="btnDownload">下载 APK 文件</span>
-        </a>
-        <span class="ver-note" data-i18n="verNote">v1.6.1 · 17.8MB · Android 7.0+</span>
+    <div class="hero-grid">
+      <div class="hero-text">
+        <h1><span data-i18n="h1">X 视频，一键捕获</span></h1>
+        <p class="slogan" data-i18n="slogan">专为 X / Twitter 打造的 Android 视频下载工具，全球超过 10 万用户正在使用。粘贴链接或从 X 应用一键分享，自动识别帖子内的全部视频并逐一下载，以原画清晰度合成为 MP4 直达系统相册——无需 FFmpeg、无广告、无任何多余权限。登录账号可解锁更多可下载内容，即使在其他工具无法登录的情况下，X-Catch 依然稳定在线。轻量、安全、极速，让每一段想保存的视频都触手可及。</p>
+        <div class="cta-row">
+          <a class="btn-download" href="https://download.anywaystudio.uk/xcatch/X-Catch-v1.6.1.apk">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v10m0 0l-4-4m4 4l4-4M5 19h14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+            <span data-i18n="btnDownload">下载 APK 文件</span>
+          </a>
+          <span class="ver-note" data-i18n="verNote">v1.6.1 · 17.8MB · Android 7.0+</span>
+        </div>
+        <p class="small-note" data-i18n="sideLoad">侧载安装：手机需允许「安装未知来源应用」</p>
       </div>
-      <p class="small-note" data-i18n="sideLoad">侧载安装：手机需允许「安装未知来源应用」</p>
+      <div class="phone-wrap">
+        <div class="phone">
+          <div class="phone-notch"></div>
+          <img class="phone-screen" src="assets/app-screenshot.jpg" alt="X-Catch v1.6.1 应用界面">
+        </div>
+      </div>
     </div>
   </div>
 </header>
 
 <main class="container">
-
-  <!-- ============ 应用界面截图 ============ -->
-  <section class="card screenshot-card">
-    <h2 class="section-title" data-i18n="shotTitle">应用界面</h2>
-    <img class="screenshot" src="assets/app-screenshot.jpg" alt="X-Catch v1.6.1 应用界面">
-  </section>
 
   <!-- ============ 评分 / RATING ============ -->
   <section class="card rating-card">
@@ -182,7 +184,10 @@
 
   <!-- ============ 下载 / DOWNLOAD ============ -->
   <section class="card download-card">
-    <h2 data-i18n="dlTitle">下载 X-Catch</h2>
+    <div class="dl-head">
+      <img class="dl-icon" src="assets/icons/app-icon.png" alt="">
+      <h2 data-i18n="dlTitle">下载 X-Catch</h2>
+    </div>
     <p class="dl-meta" data-i18n="dlMeta">最新版本 v1.6.1 · 仅 Android · 约 17.8MB</p>
     <a class="btn-download btn-lg" href="https://download.anywaystudio.uk/xcatch/X-Catch-v1.6.1.apk">
       <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v10m0 0l-4-4m4 4l4-4M5 19h14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
