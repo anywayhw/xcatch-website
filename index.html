@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>X-Catch — X/Twitter 视频下载器 | X Video Downloader</title>
-<meta name="description" content="X-Catch 是专为 X/Twitter 打造的 Android 视频下载工具：粘贴链接或一键分享即可下载帖子内全部视频，原画清晰度合成 MP4 存入相册。完全免费、无广告、无需编解码器、登录可下载所有视频，全球 10 万+ 用户的选择。">
+<title>X-Catch — X/Twitter 视频与图片下载器 | X Video &amp; Image Downloader</title>
+<meta name="description" content="X-Catch 是专为 X/Twitter 打造的 Android 视频与图片下载工具：粘贴链接或一键分享即可下载帖子内全部视频与图片，原画视频合成 MP4、原图直接存入相册。完全免费、无广告、无需编解码器、登录可下载所有视频，全球 10 万+ 用户的选择。">
 <link rel="stylesheet" href="style.css?v=3">
 <link rel="icon" href="assets/icons/app-icon.png">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-7H0617LCT7"></script>
@@ -32,22 +32,23 @@
     <div class="hero-grid">
       <div class="hero-text">
         <h1><span data-i18n="h1">X 视频，一键捕获</span></h1>
-        <p class="slogan" data-i18n="slogan">专为 X / Twitter 打造的 Android 视频下载工具，全球超过 10 万用户正在使用。粘贴链接或从 X 应用一键分享，全自动识别帖子内的全部视频，秒速合成为原画 MP4 直达系统相册——无需编解码器、无任何多余权限要求。
+        <p class="slogan" data-i18n="slogan">专为 X / Twitter 打造的 Android 视频与图片下载工具，全球超过 10 万用户正在使用。粘贴链接或从 X 应用一键分享，全自动识别帖子内的全部视频与图片：视频秒速合成为原画 MP4，图片直接抓取最高清晰度原图，统一存入系统相册——无需编解码器、无任何多余权限要求。
 登录 X 账号后可下载所有视频，做到能看就能下，即使在遇到限制下载的情况下，X-Catch 依然稳定在线。轻量、安全、快人一步，让每一段想保存的视频都触手可及。
-完全免费使用，全程无广告。非常轻量且具有完善功能，是最适合你的 X 视频下载工具。</p>
+完全免费使用，全程无广告。非常轻量且具有完善功能，是最适合你的 X 视频与图片下载工具。</p>
         <div class="cta-row">
-          <a class="btn-download" href="https://download.anywaystudio.uk/xcatch/X-Catch-v1.6.1.apk">
+          <a class="btn-download" href="https://download.anywaystudio.uk/xcatch/X-Catch-v1.8.0.apk">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v10m0 0l-4-4m4 4l4-4M5 19h14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
             <span data-i18n="btnDownload">下载 APK 文件</span>
           </a>
-          <span class="ver-note" data-i18n="verNote">v1.6.1 · 17.8MB · Android 7.0+</span>
+          <span class="ver-note" data-i18n="verNote">v1.8.0 · 14.5MB · Android 7.0+</span>
         </div>
         <p class="small-note" data-i18n="sideLoad">侧载安装：手机需允许「安装未知来源应用」</p>
+        <p class="small-note migrate-note" data-i18n="migrateNote">⚠️ 从 v1.7.0 及更早版本升级：请先卸载旧版再安装本版（已切换为正式发布签名），已下载的视频/图片文件不受影响；此后可应用内自动更新。</p>
       </div>
       <div class="phone-wrap">
         <div class="phone">
           <div class="phone-notch"></div>
-          <img class="phone-screen" src="assets/app-screenshot.jpg" alt="X-Catch v1.6.1 应用界面">
+          <img class="phone-screen" src="assets/app-screenshot.jpg" alt="X-Catch v1.8.0 应用界面">
         </div>
       </div>
     </div>
@@ -81,13 +82,13 @@
     </div>
     <div class="feature">
       <div class="f-icon">🎬</div>
-      <h3 data-i18n="f2t">一帖多视频</h3>
-      <p data-i18n="f2d">自动识别帖子里的多个视频，逐个下载，绝不漏掉。</p>
+      <h3 data-i18n="f2t">视频 + 图片一起收</h3>
+      <p data-i18n="f2d">自动识别帖子里的全部视频；开启「下载图片文件」后，图片也一并下载，同一帖子内连续编号。</p>
     </div>
     <div class="feature">
       <div class="f-icon">📶</div>
-      <h3 data-i18n="f3t">自动最高清</h3>
-      <p data-i18n="f3d">自动选择 HLS 最高清晰度流，画质拉满。</p>
+      <h3 data-i18n="f3t">原画 / 原图最高清</h3>
+      <p data-i18n="f3d">视频自动选择 HLS 最高清晰度流，图片抓取原始大图，画质拉满。</p>
     </div>
     <div class="feature">
       <div class="f-icon">⚡️</div>
@@ -102,7 +103,7 @@
     <div class="feature">
       <div class="f-icon">📁</div>
       <h3 data-i18n="f6t">存入系统相册</h3>
-      <p data-i18n="f6d">下载完成自动保存到 Movies/X-Catch，随时播放、分享、管理。</p>
+      <p data-i18n="f6d">视频与图片统一保存到 DCIM/X-Catch（兼容旧版 Movies/X-Catch），相册立刻可见，随时播放、分享、管理。</p>
     </div>
   </section>
 
@@ -190,12 +191,12 @@
       <img class="dl-icon" src="assets/icons/app-icon.png" alt="">
       <h2 data-i18n="dlTitle">下载 X-Catch</h2>
     </div>
-    <p class="dl-meta" data-i18n="dlMeta">最新版本 v1.6.1 · 仅 Android · 约 17.8MB</p>
-    <a class="btn-download btn-lg" href="https://download.anywaystudio.uk/xcatch/X-Catch-v1.6.1.apk">
+    <p class="dl-meta" data-i18n="dlMeta">最新版本 v1.8.0 · 仅 Android · 约 14.5MB</p>
+    <a class="btn-download btn-lg" href="https://download.anywaystudio.uk/xcatch/X-Catch-v1.8.0.apk">
       <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v10m0 0l-4-4m4 4l4-4M5 19h14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
       <span data-i18n="btnDownload2">立即下载 APK</span>
     </a>
-    <p class="small-note" data-i18n="dlNote">安装包直接托管在 Cloudflare 全球加速网络，下载快速稳定</p>
+    <p class="small-note" data-i18n="dlNote">安装包托管在 Cloudflare 全球加速网络；从本版起支持应用内自动更新，有新版会在「设置」和「关于」提示</p>
   </section>
 </main>
 
@@ -210,19 +211,20 @@
   var dict = {
     zh: {
       h1: "X 视频，一键捕获",
-      slogan: "专为 X / Twitter 打造的 Android 视频下载工具，全球超过 10 万用户正在使用。粘贴链接或从 X 应用一键分享，全自动识别帖子内的全部视频，秒速合成为原画 MP4 直达系统相册——无需编解码器、无任何多余权限要求。\n登录 X 账号后可下载所有视频，做到能看就能下，即使在遇到限制下载的情况下，X-Catch 依然稳定在线。轻量、安全、快人一步，让每一段想保存的视频都触手可及。\n完全免费使用，全程无广告。非常轻量且具有完善功能，是最适合你的 X 视频下载工具。",
+      slogan: "专为 X / Twitter 打造的 Android 视频与图片下载工具，全球超过 10 万用户正在使用。粘贴链接或从 X 应用一键分享，全自动识别帖子内的全部视频与图片：视频秒速合成为原画 MP4，图片直接抓取最高清晰度原图，统一存入系统相册——无需编解码器、无任何多余权限要求。\n登录 X 账号后可下载所有视频，做到能看就能下，即使在遇到限制下载的情况下，X-Catch 依然稳定在线。轻量、安全、快人一步，让每一段想保存的视频都触手可及。\n完全免费使用，全程无广告。非常轻量且具有完善功能，是最适合你的 X 视频与图片下载工具。",
       btnDownload: "下载 APK 文件",
-      verNote: "v1.6.1 · 17.8MB · Android 7.0+",
+      verNote: "v1.8.0 · 14.5MB · Android 7.0+",
       sideLoad: "侧载安装：手机需允许「安装未知来源应用」",
+      migrateNote: "⚠️ 从 v1.7.0 及更早版本升级：请先卸载旧版再安装本版（已切换为正式发布签名），已下载的视频/图片文件不受影响；此后可应用内自动更新。",
       outof: "/ 5",
       ratingMeta: "12,458 条评分 · 100,000+ 次下载",
       star5: "5 星", star4: "4 星", star3: "3 星", star2: "2 星", star1: "1 星",
       f1t: "粘贴即解析", f1d: "粘贴 X/Twitter 帖子链接，一键解析，也支持从 X 应用直接分享进来。",
-      f2t: "一帖多视频", f2d: "自动识别帖子里的多个视频，逐个下载，绝不漏掉。",
-      f3t: "自动最高清", f3d: "自动选择 HLS 最高清晰度流，画质拉满。",
+      f2t: "视频 + 图片一起收", f2d: "自动识别帖子里的全部视频；开启「下载图片文件」后，图片也一并下载，同一帖子内连续编号。",
+      f3t: "原画 / 原图最高清", f3d: "视频自动选择 HLS 最高清晰度流，图片抓取原始大图，画质拉满。",
       f4t: "轻量合成 MP4", f4d: "内置合成引擎，无需 FFmpeg，APK 仅约 17MB。",
       f5t: "登录可选 · 加密保存", f5d: "公开视频免登录；登录态经 Android Keystore + AES-GCM 加密，永不上传。",
-      f6t: "存入系统相册", f6d: "下载完成自动保存到 Movies/X-Catch，随时播放、分享、管理。",
+      f6t: "存入系统相册", f6d: "视频与图片统一保存到 DCIM/X-Catch（兼容旧版 Movies/X-Catch），相册立刻可见，随时播放、分享、管理。",
       reviewsTitle: "用户都在说",
       shotTitle: "应用界面",
       r1: "我用过很多 X 视频下载器，这个最稳。四个月零闪退，画质还特别清楚。",
@@ -234,27 +236,28 @@
       r7: "下载下来的视频清晰度特别高，体积还小，比我之前用的工具好用太多了。",
       r8: "登录账号以后能下载更多视频！别的下载器都登不上 X 了，它还能正常登录，太关键了。",
       dlTitle: "下载 X-Catch",
-      dlMeta: "最新版本 v1.6.1 · 仅 Android · 约 17.8MB",
+      dlMeta: "最新版本 v1.8.0 · 仅 Android · 约 14.5MB",
       btnDownload2: "立即下载 APK",
-      dlNote: "安装包直接托管在 Cloudflare 全球加速网络，下载快速稳定",
+      dlNote: "安装包托管在 Cloudflare 全球加速网络；从本版起支持应用内自动更新，有新版会在「设置」和「关于」提示",
       privacy: "隐私",
       privacyNote: "隐私承诺：登录状态仅加密保存在本机（Android Keystore + AES-GCM），仅用于解析视频地址；应用不会上传你的帖子、关注列表等信息，也不会在你的账号上发布或修改任何内容。统计采集默认关闭，仅在征得同意后收集匿名使用数据。"
     },
     en: {
       h1: "Catch X Videos, One Tap",
-      slogan: "Built for Android, X-Catch is the video downloader for X / Twitter trusted by 100,000+ users worldwide. Paste a link or share directly from the X app: every video in the post is detected fully automatically and merged into original-quality MP4 files in seconds, saved straight to your gallery — no codecs needed, no unnecessary permission requests.\nSign in to your X account to download every video — if you can see it, you can save it. Even when downloads are restricted, X-Catch keeps working steadily online. Lightweight, secure and one step ahead, keeping every video you want to save within reach.\nCompletely free, with zero ads. Compact yet fully featured, X-Catch is the X video downloader made for you.",
+      slogan: "Built for Android, X-Catch is the video & image downloader for X / Twitter trusted by 100,000+ users worldwide. Paste a link or share directly from the X app: every video and image in the post is detected fully automatically — videos merged into original-quality MP4 in seconds, pictures saved at their highest resolution, all straight to your gallery — no codecs needed, no unnecessary permission requests.\nSign in to your X account to download every video — if you can see it, you can save it. Even when downloads are restricted, X-Catch keeps working steadily online. Lightweight, secure and one step ahead, keeping every video you want to save within reach.\nCompletely free, with zero ads. Compact yet fully featured, X-Catch is the X video & image downloader made for you.",
       btnDownload: "Download APK",
-      verNote: "v1.6.1 · 17.8MB · Android 7.0+",
+      verNote: "v1.8.0 · 14.5MB · Android 7.0+",
       sideLoad: "Sideload: allow “Install unknown apps” on your device",
+      migrateNote: "⚠️ Upgrading from v1.7.0 or earlier: uninstall the old build first, then install this one (release signing changed). Files you already downloaded are untouched; after this, in-app auto update works.",
       outof: "/ 5",
       ratingMeta: "12,458 ratings · 100,000+ downloads",
       star5: "5 stars", star4: "4 stars", star3: "3 stars", star2: "2 stars", star1: "1 star",
       f1t: "Paste & Parse", f1d: "Paste any X/Twitter post link and parse instantly — or share straight from the X app.",
-      f2t: "Multiple Videos", f2d: "Auto-detects every video in a post. Download them one by one, nothing missed.",
-      f3t: "Best Quality Auto", f3d: "Automatically picks the highest-resolution HLS stream available.",
+      f2t: "Videos + Images", f2d: "Detects every video in a post; turn on “Download images” to grab the pictures too, numbered continuously within the post.",
+      f3t: "Best Quality Auto", f3d: "Picks the highest-resolution HLS stream for videos and the original image for photos.",
       f4t: "Lightweight MP4", f4d: "Built-in muxer — no FFmpeg required. APK only ~17MB.",
       f5t: "Login Optional · Encrypted", f5d: "Public posts need no login. Login state is encrypted with Android Keystore + AES-GCM, never uploaded.",
-      f6t: "Saves to Gallery", f6d: "Downloads land in Movies/X-Catch — play, share and manage anytime.",
+      f6t: "Saves to Gallery", f6d: "Videos and images land together in DCIM/X-Catch (old Movies/X-Catch still supported) — visible in your gallery instantly.",
       reviewsTitle: "What users say",
       shotTitle: "App Preview",
       r1: "Tried a lot of X downloaders — this one is the most stable. Four months, zero crashes, and the quality is crystal clear.",
@@ -266,9 +269,9 @@
       r7: "The video quality is superb and files stay small — way better than the tool I used before.",
       r8: "Signing in unlocks even more downloads! Other tools can't stay logged into X anymore, but this one works — that's the dealbreaker for me.",
       dlTitle: "Download X-Catch",
-      dlMeta: "Latest v1.6.1 · Android only · ~17.8MB",
+      dlMeta: "Latest v1.8.0 · Android only · ~14.5MB",
       btnDownload2: "Download APK Now",
-      dlNote: "Served directly from Cloudflare's global edge network — fast and reliable",
+      dlNote: "Served from Cloudflare's global edge network; starting with this version, in-app auto update notifies you in Settings and About",
       privacy: "Privacy",
       privacyNote: "Privacy: your login state is encrypted and stored only on your device (Android Keystore + AES-GCM) and is used solely to resolve video addresses. X-Catch never uploads your posts, following lists or other data, and never publishes or modifies anything on your account. Analytics is off by default and only anonymous usage data is collected after you give consent."
     }
