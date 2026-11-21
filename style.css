@@ -172,6 +172,70 @@ a:hover { text-decoration: underline; }
   border: 1px solid #000;
 }
 
+/* ============ 账号登录展示 ============ */
+.account-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 250px;
+  gap: 48px;
+  align-items: center;
+  padding: 36px;
+  margin: 20px 0;
+  background:
+    radial-gradient(circle at 85% 20%, rgba(29, 155, 240, 0.18), transparent 42%),
+    var(--card);
+  box-shadow: var(--shadow);
+}
+
+.account-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 10px;
+  border: 1px solid rgba(29, 155, 240, 0.35);
+  border-radius: 999px;
+  color: #7cc7ff;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.account-copy h2 {
+  margin: 12px 0 14px;
+  font-size: 28px;
+  line-height: 1.25;
+  letter-spacing: -0.5px;
+}
+
+.account-copy p {
+  margin: 0;
+  max-width: 620px;
+  color: var(--text-dim);
+  font-size: 15px;
+  line-height: 1.75;
+}
+
+.account-points {
+  display: grid;
+  gap: 9px;
+  margin: 20px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.account-points li {
+  display: flex;
+  gap: 9px;
+  color: var(--text-dim);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.account-points li::before {
+  content: "\2713";
+  color: #2ecc71;
+  font-weight: 800;
+}
+
 /* ============ 评分 ============ */
 .rating-card {
   display: flex;
@@ -354,6 +418,8 @@ footer a:hover { color: var(--accent); }
 @media (max-width: 760px) {
   .hero-grid { grid-template-columns: 1fr; gap: 32px; padding: 32px 0 48px; }
   .phone-wrap { margin-top: 8px; }
+  .account-card { grid-template-columns: 1fr; gap: 30px; padding: 24px; }
+  .account-copy h2 { font-size: 24px; }
 }
 @media (max-width: 480px) {
   .hero-text h1 { font-size: 32px; }

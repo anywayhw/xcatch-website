@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>X-Catch — 多平台视频与图片下载器 | Multi-platform Video &amp; Image Downloader</title>
 <meta name="description" content="X-Catch 是 Android 上的多平台视频与图片下载工具：支持 X/Twitter、TikTok、抖音、快手、微博、哔哩哔哩、小红书。粘贴分享链接即可解析并下载无水印视频与原始图片，完全免费、无广告、无需编解码器，公开内容免登录，全球 10 万+ 用户的选择。">
-<link rel="stylesheet" href="style.css?v=4">
+<link rel="stylesheet" href="style.css?v=5">
 <link rel="icon" href="assets/icons/app-icon.png">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-7H0617LCT7"></script>
 <script>
@@ -48,7 +48,7 @@
       <div class="phone-wrap">
         <div class="phone">
           <div class="phone-notch"></div>
-          <img class="phone-screen" src="assets/app-screenshot.jpg" alt="X-Catch 应用界面">
+          <img class="phone-screen" src="assets/app-screenshot.jpg" alt="X-Catch 主界面">
         </div>
       </div>
     </div>
@@ -107,6 +107,27 @@
     </div>
   </section>
 
+  <!-- ============ 账号登录展示 / ACCOUNT ============ -->
+  <section class="card account-card">
+    <div class="account-copy">
+      <span class="account-eyebrow" data-i18n="acctEyebrow">X 账号登录</span>
+      <h2 data-i18n="acctTitle">登录后，受限内容也能下载</h2>
+      <p data-i18n="acctDesc">公开内容免登录即可解析。登录 X 账号后，可以下载私密或受保护帖子的视频；登录态仅加密保存在本机，只用于解析，不会在你的账号上发布或修改任何内容，随时可退出并一键清除。</p>
+      <ul class="account-points">
+        <li data-i18n="acctP1">可下载私密 / 受限帖子的视频</li>
+        <li data-i18n="acctP2">登录态仅保存在本机，不会上传</li>
+        <li data-i18n="acctP3">不会在账号上发布或修改任何内容</li>
+        <li data-i18n="acctP4">随时可退出登录，一键清除登录态</li>
+      </ul>
+    </div>
+    <div class="phone-wrap">
+      <div class="phone">
+        <div class="phone-notch"></div>
+        <img class="phone-screen" src="assets/app-screenshot-account.jpg" alt="X-Catch 已登录 X 账号界面">
+      </div>
+    </div>
+  </section>
+
   <!-- ============ 用户评价 / REVIEWS ============ -->
   <section class="reviews">
     <h2 class="section-title" data-i18n="reviewsTitle">用户都在说</h2>
@@ -153,6 +174,13 @@
       f4t: "轻量合成 MP4", f4d: "内置合成引擎，无需 FFmpeg，APK 仅约 15MB。",
       f5t: "登录可选 · 加密保存", f5d: "公开内容免登录；X 登录仅用于受限内容，登录态经 Android Keystore + AES-GCM 加密，永不上传。",
       f6t: "支持多平台解析下载", f6d: "X、TikTok、抖音、快手、微博、哔哩哔哩、小红书一站支持；视频与图片统一保存到 DCIM/X-Catch，相册立刻可见。",
+      acctEyebrow: "X 账号登录",
+      acctTitle: "登录后，受限内容也能下载",
+      acctDesc: "公开内容免登录即可解析。登录 X 账号后，可以下载私密或受保护帖子的视频；登录态仅加密保存在本机，只用于解析，不会在你的账号上发布或修改任何内容，随时可退出并一键清除。",
+      acctP1: "可下载私密 / 受限帖子的视频",
+      acctP2: "登录态仅保存在本机，不会上传",
+      acctP3: "不会在账号上发布或修改任何内容",
+      acctP4: "随时可退出登录，一键清除登录态",
       reviewsTitle: "用户都在说",
       shotTitle: "应用界面",
       r1: "我用过很多 X 视频下载器，这个最稳。四个月零闪退，画质还特别清楚。",
@@ -186,6 +214,13 @@
       f4t: "Lightweight MP4", f4d: "Built-in muxer — no FFmpeg required. APK only ~15MB.",
       f5t: "Login Optional · Encrypted", f5d: "Public content needs no login; X sign-in is only for restricted posts. Login state is encrypted with Android Keystore + AES-GCM, never uploaded.",
       f6t: "Multi-platform Downloads", f6d: "X, TikTok, Douyin, Kuaishou, Weibo, Bilibili and Xiaohongshu in one app — videos and images land together in DCIM/X-Catch, visible in your gallery instantly.",
+      acctEyebrow: "X ACCOUNT",
+      acctTitle: "Sign in to download restricted posts",
+      acctDesc: "Public content works without signing in. Sign in to X to download videos from private or protected posts. Your login state is encrypted and stored only on this device, used solely for parsing — X-Catch never posts or changes anything on your account, and you can sign out and clear it at any time.",
+      acctP1: "Download videos from private / restricted posts",
+      acctP2: "Login state stays on this device and is never uploaded",
+      acctP3: "Never posts or changes anything on your account",
+      acctP4: "Sign out anytime and clear the login state in one tap",
       reviewsTitle: "What users say",
       shotTitle: "App Preview",
       r1: "Tried a lot of X downloaders — this one is the most stable. Four months, zero crashes, and the quality is crystal clear.",
