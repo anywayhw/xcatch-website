@@ -186,7 +186,21 @@ a:hover { text-decoration: underline; }
   box-shadow: var(--shadow);
 }
 
-.account-eyebrow {
+.capture-card {
+  display: grid;
+  grid-template-columns: 250px minmax(0, 1fr);
+  gap: 48px;
+  align-items: center;
+  padding: 36px;
+  margin: 20px 0;
+  background:
+    radial-gradient(circle at 15% 20%, rgba(29, 155, 240, 0.16), transparent 42%),
+    var(--card);
+  box-shadow: var(--shadow);
+}
+
+.account-eyebrow,
+.capture-eyebrow {
   display: inline-flex;
   align-items: center;
   padding: 5px 10px;
@@ -199,14 +213,16 @@ a:hover { text-decoration: underline; }
   text-transform: uppercase;
 }
 
-.account-copy h2 {
+.account-copy h2,
+.capture-copy h2 {
   margin: 12px 0 14px;
   font-size: 28px;
   line-height: 1.25;
   letter-spacing: -0.5px;
 }
 
-.account-copy p {
+.account-copy p,
+.capture-copy p {
   margin: 0;
   max-width: 620px;
   color: var(--text-dim);
@@ -420,6 +436,9 @@ footer a:hover { color: var(--accent); }
   .phone-wrap { margin-top: 8px; }
   .account-card { grid-template-columns: 1fr; gap: 30px; padding: 24px; }
   .account-copy h2 { font-size: 24px; }
+  .capture-card { grid-template-columns: 1fr; gap: 30px; padding: 24px; }
+  .capture-copy { order: -1; }
+  .capture-copy h2 { font-size: 24px; }
 }
 @media (max-width: 480px) {
   .hero-text h1 { font-size: 32px; }
